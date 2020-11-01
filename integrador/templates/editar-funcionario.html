@@ -1,0 +1,59 @@
+{% extends "base.html" %}
+{% block titulo_pagina %}Editar funcionário{% endblock titulo_pagina %}
+{% block conteudo %}
+<div class="row" style="padding-top: 150px; padding-left: 250px;">
+    <form method="POST">{% csrf_token %}
+        <div class="form-group row">
+          <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+          <div class="col-sm-10">
+            {{ editar_form.nome }}
+          </div>
+        </div>
+        <div class="form-group row">
+            <label for="dataNascimento" class="col-sm-2 col-form-label">Nascimento</label>
+            <div class="col-sm-10">
+                {{ editar_form.dataNascimento }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="is_admin" class="col-sm-2 col-form-label">Administrador</label>
+            <div class="col-sm-10">
+                {{ editar_form.is_admin }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cpf" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                {{ editar_form.cpf }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="email" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                {{ editar_form.email }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="cep" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                {{ editar_form.cep }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <label for="oficina" class="col-sm-2 col-form-label"></label>
+            <div class="col-sm-10">
+                {{ editar_form.oficina }}
+            </div>
+        </div>
+        <div class="form-group row">
+            <div class="col-sm-2 style="padding-left: 230px;"><a href="{% url 'deletar-funcionario' editar_form.cpf.value %}">
+                <button type="button" class="btn btn-danger" onclick="return confirm('Certeza Zé?');">Deletar</button></a>
+            </div>
+            <div class="col-sm-10">
+                <button type="submit" class="btn btn-warning butao-salvar">Salvar</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+{% endblock conteudo %}

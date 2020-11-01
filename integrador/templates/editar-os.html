@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+{% block titulo_pagina %}Editar ordem de serviço{% endblock titulo_pagina %}
+    {% block conteudo %}
+        <div class="row" style="padding-top: 50px; padding-left: 250px;">
+            <form method="POST">{% csrf_token %}
+                <br><br>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                      {{ form.funcionario }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                      {{ form.data }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="Veiculo" class="col-sm-2 col-form-label">Veiculo</label>
+                    <div class="col-sm-10">
+                      {{ form.placaVeiculo }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="desconto" class="col-sm-2 col-form-label">Desconto</label>
+                    <div class="col-sm-10">
+                      {{ form.desconto }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                  <div class="col-sm-10">
+                    {{ form.preco }}
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="servico" class="col-sm-2 col-form-label">Serviços</label>
+                    <div class="col-sm-10">
+                      {{ form.servico }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="status" class="col-sm-2 col-form-label">Finalizar ordem</label>
+                    <label class="switch">
+                        {{ form.status }}
+                        <span class="slider round"></span>
+                    </label></li>
+                </div>
+                <div class="col-sm-10">
+                    <button type="submit" class="btn btn-warning butao-salvar" onclick="return confirm('Certeza Zé?');">Salvar</button>
+                </div>
+            </form>
+        </div>    
+        {% endblock conteudo %}

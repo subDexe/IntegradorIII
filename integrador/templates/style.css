@@ -1,0 +1,185 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.logo {
+  font-family: fantasy;
+  font-style: oblique;
+  src: local('integrador') 
+    url('/ingarage/fontes/ChalkDust.ttf') format("truetype");
+  color: #E9B000;
+  font-size:50px;
+  text-align: center;
+}
+
+
+
+.usar {
+  background-color: #746b6b;
+  text-align: center;
+  font-weight: bolder;
+  font-size:25px;
+}
+
+.avisoInput {
+  font-family: Helvetica Neue;
+  font-size: 15px;
+  font-weight: lighter;
+  color: #006400;
+  text-align: left;
+  margin-left: 5.2px;
+  margin-right: -45px;
+  margin-left: -390px;
+}
+
+.bottombar {
+  background-color: #574949;
+  text-align: center;
+  font-size: 20px;
+  font-weight: lighter;
+}
+
+.top-bar {
+  background-color: #778899;
+}
+
+.botao-hp {
+  width: 200px;
+  text-align: center;
+}
+
+.botao-entrar-hp {
+  color: black;
+}
+
+.registro {
+  background-color: #746b6b;
+  text-align: center;
+  font-weight: bolder;
+  font-size:25px;
+}
+
+.form-registro {
+  margin-left: 37%;
+}
+
+.label-registro {
+  font-weight: lighter;
+  font-size:20px;
+  text-align: justify;
+  margin-left: -75px;
+}
+
+.input-registro {
+  width: 300px;
+  text-align: center;
+  margin-left: -140px;
+  margin-right: 100px;
+}
+
+.checkbox-registro {
+  width: 30px;
+  margin-left: 15%;
+  padding: 15px;
+}
+
+.botao-registro {
+  width: 150px;
+  font-weight: bold;
+}
+
+.p-gambiarra {
+  color: #746b6b;
+}
+
+.link-registro {
+  padding-left: 10%;
+  color: black;
+  text-decoration: underline;
+}
+
+.label-login {
+  color: #ffffff;
+  padding-right: 0px;
+  margin-left: -450px;
+}
+
+.input-login {
+    width: 760px;
+    padding-left: 0px;
+    margin-left: -380px;
+}
+
+.botao-login {
+  width: 110px;
+  font-weight: bold ;
+}
+
+li {
+  display: inline;
+  line-height: 5px;
+}
+
+.oficina-cadastro-label {
+  color: #000000;
+  margin-left: -450px;
+  font-weight: lighter;
+  font-size: 25px;
+  text-align: justify;
+}
+
+.oficina-cadastro-input {
+  width: 500px;
+  margin-left: -100px;
+  margin-right: 150px;
+}
+
+.oficina-cadastro-botao {
+  font-weight: bold;
+  margin-left: -200px;
+}
+
+.container-fluid{
+  padding-left: 0rem;
+  padding-right: 0rem;
+  overflow: hidden;
+}
+
+.navbar-top {
+  background-color:#778899;
+  height: 10vh;
+}
+
+.nav-link {
+  display: flex;
+  list-style: none;
+  color: #000000;
+  text-decoration: none;
+  font-size: 16px;
+  width: 60%;
+  height: 100%;
+  justify-content: space-around;
+  align-items: center;
+  margin-left: auto;
+}
+
+.logo-navbar {
+  color:yellow; 
+  font-style: oblique; 
+  font-weight: bold;
+  font-size:25px;
+  margin-right: 300px;
+}
+
+@media screen and (max-width:698px) {
+  .nav-link {
+    position: fixed;
+    background-color: #778899;
+    height: 30vh;
+    width: 100%;
+    flex-direction: column;
+  }
+}

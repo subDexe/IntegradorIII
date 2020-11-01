@@ -1,0 +1,39 @@
+{% extends "base.html" %}
+{% block titulo_pagina %}Editar cliente físico{% endblock titulo_pagina %}
+    {% block conteudo %}
+        <div class="row" style="padding-top: 160px; padding-left: 250px;">
+            <form method="POST">{% csrf_token %}
+                <div class="form-group row">
+                  <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                  <div class="col-sm-10">
+                    {{ editar_cf_form.nome }}
+                  </div>
+                </div>
+                <div class="form-group row">
+                    <label for="telefone" class="col-sm-2 col-form-label">Telefone</label>
+                    <div class="col-sm-10">
+                        {{ editar_cf_form.telefone }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                        {{ editar_cf_form.email }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        {{ editar_cf_form.cpf }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-2 style="padding-left: 230px;"><a href="{% url 'deletar-cf' editar_cf_form.cpf.value %}">
+                        <button type="button" class="btn btn-danger" onclick="return confirm('Certeza Zé?');">Deletar</button></a>
+                    </div>
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-warning butao-salvar">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endblock %}

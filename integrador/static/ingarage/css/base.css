@@ -1,0 +1,381 @@
+body {
+    background-color: #CAE1FF;
+    color: #1C1C1C;
+    font-weight: bold;
+}
+
+.dark-mode {
+    background-color: #2a2a35;
+    color: #CAE1FF;
+}
+
+.form-control-dark {
+    background-color: #2a2a35;
+    color: #CAE1FF;
+}
+
+p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 1.1em;
+    font-weight: 300;
+    line-height: 1.7em;
+    color: #999;
+}
+
+a,
+a:hover,
+a:focus {
+    color: inherit;
+    text-decoration: none;
+    transition: all 0.3s;
+}
+
+.navbar {
+    padding: 15px 10px;
+    background: #fff;
+    border: none;
+    border-radius: 0;
+    margin-bottom: 40px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-btn {
+    box-shadow: none;
+    outline: none !important;
+    border: none;
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    border-bottom: 1px dashed #ddd;
+    margin: 40px 0;
+}
+
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+.wrapper {
+    font-weight: normal;
+    display: flex;
+    width: 100%;
+}
+
+#sidebar {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    z-index: 999;
+    background: #eab41e;
+    color: black;
+    transition: all 0.3s;
+}
+
+#sidebar.active {
+    margin-left: -250px;
+}
+
+#sidebar .sidebar-header {
+    padding: 11px 20px 10px 20px;
+    background: white;
+}
+
+#sidebar ul.components {
+    border-bottom: 1px solid #eab41e;
+}
+
+#sidebar ul p {
+    color: #fff;
+    padding: 10px;
+}
+
+#sidebar ul li a {
+    padding: 10px;
+    font-size: 1.1em;
+    display: block;
+}
+
+#sidebar ul li a:hover {
+    color: white;
+    background: #282829;
+}
+
+#sidebar ul li.active>a,
+a[aria-expanded="true"] {
+    color: #fff;
+    background: #000000;
+}
+    
+a[data-toggle="collapse"] {
+    position: relative;
+}
+
+.dropdown-toggle::after {
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+}
+
+ul ul a {
+    font-size: 0.9em !important;
+    padding-left: 30px !important;
+    background: #eab41e;
+}
+
+.menu-text {
+   color:black;
+   font-size: 24px;
+   font-weight: bold;
+   position: relative;
+   top: 10px;
+   left:5px;
+}
+
+
+.menu-btn {
+    background: #778899;
+    margin-top: 10px;
+    color: white;
+}
+
+.menu-header {
+    width:100%;
+    height:64px;
+    background:#778899;
+}
+/* Toggler */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 55px;
+    height: 20px;
+  }
+  
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 13px;
+    width: 13px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+  
+input:checked + .slider {
+    background-color: #2196F3;
+}
+  
+input:focus + .slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+  
+input:checked + .slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+  
+.slider.round {
+    border-radius: 34px;
+}
+  
+.slider.round:before {
+    border-radius: 50%;
+}
+
+
+
+/* ---------------------------------------------------
+    CONTENT STYLE
+----------------------------------------------------- */
+
+#content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    transition: all 0.3s;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+#content.active {
+    width: 100%;
+}
+
+.esquerda {
+    align-content: space-around;
+    align-items: center;
+    height: 100%;
+    padding: 0%;
+    margin-left: auto;
+}
+
+
+/*BLOCo CONTEUDO*/
+.lista-objetos {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    border-color: #000000;
+}
+
+.linha-objetos {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-bottom: 2px black;
+    float: left;
+    font-size: 20px;
+    width: 200px;
+    height: 95px;
+}
+
+.linha-header {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    float: left;
+    font-size: 20px;
+    width: 200px;
+    height: 50px;
+    font-weight: bolder;
+}
+
+.butao-add {
+    font-weight: bold;
+}
+
+.input-cadastro {
+    margin-left: 60px;
+    width: 400px;
+    height: 40px;
+}
+
+.butao-salvar {
+    font-weight:bold; 
+    margin-left: 600px;
+}
+
+ul.separator {
+	list-style: none;
+	padding: 0;
+	width: 100%;
+}
+
+ul.separator li {
+	padding: .5em 0;
+	border-bottom: 1px solid #CCC;
+}
+
+ul.separator {
+	list-style: none;
+	padding: 0;
+	width: 100%;
+}
+
+ul.separator li {
+	padding: .5em 0;
+	border-bottom: 1px solid #CCC;
+}
+
+.linha-servico {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-bottom: 2px black;
+    float: left;
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+}
+
+.linha-header-servico {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    float: left;
+    font-size: 20px;
+    width: 250px;
+    height: 50px;
+    font-weight: bolder;
+}
+
+.linha-veiculo {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    border-bottom: 2px black;
+    float: left;
+    font-size: 20px;
+    width: 150px;
+    height: 100px;
+}
+
+.linha-header-veiculo {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+    float: left;
+    font-size: 20px;
+    width: 150px;
+    height: 50px;
+    font-weight: bolder;
+}
+
+.servicos {
+    height: 100px;
+}
+
+@media (max-width: 768px) {
+    #sidebar {
+        margin-left: -250px;
+    }
+    #sidebar.active {
+        margin-left: 0;
+    }
+    #content {
+        width: 100%;
+    }
+    #content.active {
+        width: calc(100% - 250px);
+    }
+    #linha-objetos {
+        width: 100%;
+    }
+    #linha-header {
+        width: 100%;
+    }
+   
+}

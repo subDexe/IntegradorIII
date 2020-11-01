@@ -1,0 +1,135 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+	    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+	    <link rel="stylesheet" type="text/css" href="{% static 'ingarage/css/style.css' now %}">
+      <title>Registrar administrador</title>
+    </head>
+    <body>
+        <div class="container-fluid registro">
+            <div class="row top-bar">
+                <div class="col">
+                    <h1 class="logo">InterGarageWeb</h1><br>
+                    <h2>Comece cadastrando um<br>administrador</h2>
+                </div>
+            </div>
+            <br>
+            <div class="row">
+              <form class="form-registro" action="register" method="POST">{% csrf_token %}
+                {{ registration_form.non_field_errors }}
+
+                  <div class="form-group">
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                        <label for="nome">Nome:</label>
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.nome }}
+                      </div>
+                      {% if registration_form.nome.errors %}
+                      <div class="col-sm" style="margin-left: -435px">
+                        {{ registration_form.nome.errors }}
+                      </div>
+                      {% endif %}
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                        <label for="cpf">CPF:</label>
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.cpf }}
+                      </div>
+                      {% if registration_form.nome.errors %}
+                      <div class="col-sm" style="margin-left: -435px">
+                        {{ registration_form.cpf.errors }}
+                      </div>
+                      {% endif %}
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                        <label for="cep">CEP:</label>
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.cep }}
+                      </div>
+                      <div class="col-sm avisoInput">
+                        <p><a target="_blank" class="link-registro" href="http://cep.la">Não sei meu CEP</a></p>
+                      </div>
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                        <label for="dataNascimento">Nascimento:</label>
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.dataNascimento }}
+                      </div>
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                        <label for="email">Email:</label>
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.email }}
+                      </div>
+                      {% if registration_form.nome.errors %}
+                      <div class="col-sm" style="margin-left: -435px">
+                        {{ registration_form.cpf.errors }}
+                      </div>
+                      {% endif %}
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                        <label for="is_admin">Administador:</label>
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.is_admin }}
+                      </div>
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row ">
+                      <div class="col-sm label-registro">
+                      </div>
+                      <div class="col-sm input-registro">
+                        {{ registration_form.oficina }}
+                      </div>
+                      {% if registration_form.nome.errors %}
+                      <div class="col-sm" style="margin-left: -435px">
+                        {{ registration_form.oficina.errors }}
+                      </div>
+                      {% endif %}
+                      <p class="p-gambiarra">a</p>
+                    </div>
+                    <div class="row">
+                      <div class="col" >
+                        {{ registration_form.password1 }}
+                        <label style="margin-right: 170px;" class="label-registro" for="password1">Senha</label>
+                      </div>
+                      aaa
+                      <div class="col">
+                        {{ registration_form.password2 }}
+                        <label style="margin-right: 170px;" class="label-registro" for="password2">Confirme a senha</label>
+                      </div>
+                      <div>
+                        <button type="submit" class="botao-registro btn btn-lg btn-warning">Avançar</button>      
+                      </div>
+                    </div>
+                  </div>
+              </form>
+            </div>
+            <div class="row">
+              <div class="col bottombar"><br>sobre<br>© 2020 Vilas Ruins, Inc.</div>
+            </div>
+          </div>
+    </body>
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+</html>

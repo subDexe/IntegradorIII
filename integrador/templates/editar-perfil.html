@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+{% block titulo_pagina %}Editar meu perfil{% endblock titulo_pagina %}
+    {% block conteudo %}
+        <div class="row" style="padding-top: 25px; padding-left: 350px;">
+            <h2>Caso queira continuar com a mesma senha<br>
+                basta deixar o campo em branco
+            </h2>
+            <form method="POST">{% csrf_token %}
+                <div class="form-group row">
+                <label for="nome" class="col-sm-2 col-form-label">Nome</label>
+                <div class="col-sm-10">
+                    {{ form.nome }}
+                </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                    {{ form.cpf }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                    {{ form.cep }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="dataNascimento" class="col-sm-2 col-form-label">Nascimento</label>
+                    <div class="col-sm-10">
+                    {{ form.dataNascimento }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                    {{ form.is_admin }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="email" class="col-sm-2 col-form-label">Email</label>
+                    <div class="col-sm-10">
+                    {{ form.email }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                <div class="col-sm-10">
+                    {{ form.oficina }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                    {{ form.oficina }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password1" class="col-sm-2 col-form-label">Nova senha</label>
+                    <div class="col-sm-10">
+                    {{ form.password1 }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <label for="password2" class="col-sm-2 col-form-label">Confirmar nova senha</label>
+                    <div class="col-sm-10">
+                    {{ form.password2 }}
+                    </div>
+                </div>
+                <div class="form-group row">
+                    <div class="col-sm-10">
+                        <button type="submit" class="btn btn-warning butao-salvar" onclick="return confirm('Certeza Zé?');">Salvar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    {% endblock conteudo %}
